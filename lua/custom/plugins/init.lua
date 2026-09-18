@@ -12,3 +12,15 @@ for file_name, type in vim.fs.dir(plugins_dir, { follow = true }) do
     require('custom.plugins.' .. module)
   end
 end
+
+vim.pack.add ({
+  'https://github.com/nvim-lua/plenary.nvim',
+  'https://github.com/nvim-tree/nvim-web-devicons',
+  'https://github.com/NeogitOrg/neogit',
+  'https://github.com/sindrets/diffview.nvim',
+})
+
+require('neogit').setup {}
+
+vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>', {desc = 'Toggle file [E]xplorer' })
+vim.keymap.set('n', '<leader>gg', ':Neogit<CR>', { desc = '[G]it status (Neogit)' })
