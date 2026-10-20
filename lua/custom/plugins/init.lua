@@ -16,11 +16,11 @@ end
 vim.pack.add ({
   'https://github.com/nvim-lua/plenary.nvim',
   'https://github.com/nvim-tree/nvim-web-devicons',
-  'https://github.com/NeogitOrg/neogit',
+--  'https://github.com/NeogitOrg/neogit',
   'https://github.com/sindrets/diffview.nvim',
   'https://github.com/OXY2DEV/markview.nvim',
 })
 
-require('neogit').setup {}
+--require('neogit').setup {}
 
-vim.keymap.set('n', '<leader>gg', ':Neogit<CR>', { desc = '[G]it status (Neogit)' })
+-- vim.keymap.set('n', '<leader>gg', ':Neogit<CR>', { desc = '[G]it status (Neogit)' })
