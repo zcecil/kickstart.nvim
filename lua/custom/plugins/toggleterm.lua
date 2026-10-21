@@ -3,6 +3,7 @@ vim.pack.add {
 }
 
 require('toggleterm').setup {
+  open_mapping = [[<c-\>]],
   -- horizontal 視窗高度 = 螢幕高度的 50%
   size = function(term)
     if term.direction == 'horizontal' then return math.floor(vim.o.lines * 0.5) end
