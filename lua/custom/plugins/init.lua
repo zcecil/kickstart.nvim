@@ -24,3 +24,7 @@ vim.pack.add ({
 --require('neogit').setup {}
 
 -- vim.keymap.set('n', '<leader>gg', ':Neogit<CR>', { desc = '[G]it status (Neogit)' })
+--
+vim.keymap.set("n", "<leader>bd", function()
+  require("mini.bufremove").delete(0, false)
+end, { desc = "Delete buffer" })

@@ -124,7 +124,7 @@ do
   --  Schedule the setting after `UiEnter` because it can increase startup-time.
   --  Remove this option if you want your OS clipboard to remain independent.
   --  See `:help 'clipboard'`
-  vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
+  -- vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
 
   -- Enable break indent
   vim.o.breakindent = true
@@ -415,6 +415,8 @@ do
       { '<leader>s', group = '[S]earch', mode = { 'n', 'v' } },
       { '<leader>t', group = '[T]oggle' },
       { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } }, -- Enable gitsigns recommended keymaps first
+      { '<leader>g', group = '[G]it' },
+      { '<leader>a', group = '[A]I' },
       { 'gr', group = 'LSP Actions', mode = { 'n' } },
     },
   }
